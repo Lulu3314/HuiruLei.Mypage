@@ -1,0 +1,25 @@
+# ===== 论文列表 =====
+# 新的写在最上面。type 可选：journal（期刊）/ conference（会议）/ other（其他）
+# authors 里用 **张三** 把自己名字加粗
+# doi、pdf 不需要可以删掉那一行
+
+- year: 2026
+  type: journal
+  authors: "**Zhang, S.**, Li, S., Wang, W."
+  title: "A study of something interesting"
+  venue: "Journal of Something, 12(3), 100–120"
+  doi: https://doi.org/10.0000/example
+  pdf: /files/zhang2026.pdf
+
+- year: 2025
+  type: journal
+  authors: "Li, S., **Zhang, S.**"
+  title: "Another important finding"
+  venue: "Another Journal, 5, e2025001"
+  doi: https://doi.org/10.0000/example2
+
+- year: 2024
+  type: conference
+  authors: "**Zhang, S.**"
+  title: "Preliminary results on something"
+  venue: "Proceedings of Some Conference 2024"

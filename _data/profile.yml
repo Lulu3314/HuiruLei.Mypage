@@ -1,0 +1,26 @@
+# ===== 个人信息：侧栏和页头都从这里读取 =====
+name: 张三
+name_en: San Zhang
+title: 某某大学 · 博士研究生 / 研究员
+photo: /images/avatar.svg        # 换成你的照片，如 /images/me.jpg
+last_update: 2026-10-22          # 每次更新内容时顺手改一下
+
+email: zhangsan (at) example.com # 用 (at) 代替 @，减少垃圾邮件
+
+affiliation: |
+  某某大学 某某学院
+  某某研究组
+
+address: |
+  中国 某省某市某区某路 1 号
+
+# 学术/社交主页链接，不需要的整行删掉即可
+links:
+  - name: Google Scholar
+    url: https://scholar.google.com/
+  - name: ORCID
+    url: https://orcid.org/
+  - name: ResearchGate
+    url: https://www.researchgate.net/
+  - name: GitHub
+    url: https://github.com/

@@ -1,0 +1,23 @@
+# ===== 动态 / 新闻 =====
+# 新的写在最上面。每条三项：
+#   date:      日期 YYYY-MM-DD（网站会自动按年份分组）
+#   text:      内容，支持 Markdown，如 *斜体*、[链接](https://...)
+#   highlight: true 时加粗显示（论文、获奖等重要消息）
+
+- date: 2026-09-25
+  text: 论文被 *Journal of Something* 接收（Zhang et al., 2026）。
+  highlight: true
+
+- date: 2026-09-14
+  text: 在某某学术年会上做口头报告。
+
+- date: 2026-05-20
+  text: 在 [某某研讨会](https://example.com) 做海报展示。
+
+- date: 2025-12-01
+  text: 获得某某优秀青年学者奖！
+  highlight: true
+
+- date: 2025-07-01
+  text: 开始在某某研究所担任研究员。
+  highlight: true

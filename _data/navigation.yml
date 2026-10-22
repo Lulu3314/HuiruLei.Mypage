@@ -1,0 +1,13 @@
+# ===== 顶部导航：增删页面只改这里 =====
+- title: 首页
+  url: /
+- title: 关于我
+  url: /cv.html
+- title: 研究
+  url: /research.html
+- title: 论文
+  url: /publications.html
+- title: 学术报告
+  url: /presentations.html
+- title: 链接
+  url: /links.html

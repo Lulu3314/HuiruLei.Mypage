@@ -1,0 +1,16 @@
+# ===== 学术报告 =====
+# kind 可写：口头 / 海报 / 邀请报告
+- date: 2026-09-14
+  kind: 口头
+  title: "某某问题的新进展"
+  event: "某某学术年会，北京"
+
+- date: 2026-05-20
+  kind: 海报
+  title: "Preliminary results on something"
+  event: "Some International Workshop, Tokyo"
+
+- date: 2025-11-02
+  kind: 邀请报告
+  title: "某某专题报告"
+  event: "某某大学，上海"

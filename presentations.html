@@ -1,0 +1,17 @@
+---
+layout: default
+title: 学术报告
+---
+<h1>学术报告</h1>
+{% assign groups = site.data.presentations | group_by_exp: "n", "n.date | date: '%Y'" %}
+{% for g in groups %}
+  <h4 class="year">{{ g.name }}</h4>
+  <ul class="news">
+    {% for n in g.items %}
+    <li>
+      <span class="d">{{ n.date | date: "%m.%d" }}</span>
+      <div><span class="tag">{{ n.kind }}</span>{{ n.title }} — {{ n.event }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

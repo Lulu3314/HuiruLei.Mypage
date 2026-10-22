@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign p = site.data.profile %}
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- ===== 页头 + 导航（所有页面共用）===== -->
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="site-name"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <p class="site-sub">{{ p.title }}</p>
+      <nav class="site-nav">
+        {% assign cur = page.url %}
+        {% if cur == "/index.html" %}{% assign cur = "/" %}{% endif %}
+        {% for item in site.data.navigation %}
+          <a href="{{ item.url | relative_url }}"{% if cur == item.url %} class="active"{% endif %}>{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap layout">
+    <!-- ===== 侧栏（所有页面共用）===== -->
+    <aside class="sidebar">
+      <img class="avatar" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">
+      <h2 class="side-name">{{ p.name }}</h2>
+      {% if p.name_en %}<p class="side-name-en">{{ p.name_en }}</p>{% endif %}
+      <p class="muted small">最后更新：{{ p.last_update | date: "%Y-%m-%d" }}</p>
+
+      <h3>联系方式</h3>
+      <p class="small"><strong>Email：</strong>{{ p.email }}</p>
+      {% if p.affiliation %}<p class="small"><strong>单位：</strong><br>{{ p.affiliation | newline_to_br }}</p>{% endif %}
+      {% if p.address %}<p class="small"><strong>地址：</strong><br>{{ p.address | newline_to_br }}</p>{% endif %}
+
+      {% if p.links %}
+      <ul class="profile-links">
+        {% for l in p.links %}
+          <li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </aside>
+
+    <!-- ===== 每页自己的内容 ===== -->
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">© {{ site.time | date: "%Y" }} {{ p.name }} · Hosted on GitHub Pages</div>
+  </footer>
+</body>
+</html>

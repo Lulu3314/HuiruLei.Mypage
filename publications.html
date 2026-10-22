@@ -1,0 +1,25 @@
+---
+layout: default
+title: 论文
+---
+<h1>论文</h1>
+<p class="muted small">内容来自 <code>_data/publications.yml</code>，加新论文只需改那个文件。</p>
+
+{% assign sections = "journal:期刊论文|conference:会议论文|other:其他" | split: "|" %}
+{% for s in sections %}
+  {% assign kv = s | split: ":" %}
+  {% assign list = site.data.publications | where: "type", kv[0] %}
+  {% if list.size > 0 %}
+  <h2>{{ kv[1] }}</h2>
+  <ol class="pubs" reversed>
+    {% for pub in list %}
+    <li>
+      {{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }} ({{ pub.year }}).
+      {{ pub.title }}. <em>{{ pub.venue }}</em>.
+      {% if pub.doi %}<a href="{{ pub.doi }}" target="_blank" rel="noopener">[DOI]</a>{% endif %}
+      {% if pub.pdf %}<a href="{{ pub.pdf | relative_url }}">[PDF]</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+{% endfor %}
