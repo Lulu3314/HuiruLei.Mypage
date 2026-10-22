@@ -1,7 +1,7 @@
 # ===== 网站全局设置（改完提交即可生效）=====
-title: 张三 Ph.D.
-description: 个人学术主页 / 简历
-lang: zh-CN
+title: Huiru Lei Ph.D.
+description: Researcher at Institute of Geophysics, CEA, Beijing, China 
+lang: en
 
 # 仓库名为 你的用户名.github.io 时，baseurl 留空 ""
 # 仓库名为其他名字（如 MyPage）时，写成 "/MyPage"
